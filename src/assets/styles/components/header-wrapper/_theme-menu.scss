@@ -1,0 +1,47 @@
+.chooseTheme{
+    position: absolute;
+    width: 236px;
+    height: 200px;
+    background: #AFAFAF;
+    right: 3.5rem;
+    top: 57px;
+    opacity: 0;
+    @include transition(.3s);
+    @include transform(translateY(-15%));
+    @include border-radius(0 0 8px 8px);
+    p{
+        font-size: 15px;
+        color: #000;
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        li{
+            width: 23px;
+            height: 23px;
+            margin: 10px;
+            cursor: pointer;
+            @include border-radius(50px);
+            &.dark{
+                background: linear-gradient(-45deg, $dark-primary, $dark-primary 49%, $color-white 49%, $color-white 51%, $dark-secondary 51% );
+            }
+            &.gray{
+                background: linear-gradient(-45deg, $gray-primary, $gray-primary 49%, $color-white 49%, $color-white 51%, $gray-secondary 51% );
+            }
+            &.blue{
+                background: #1F88F8;
+            }
+            &.light{
+                background: $color-white;
+            }
+        }
+    }
+    &.show{
+        opacity: 1;
+        @include transform(translateY(0));
+    }
+}

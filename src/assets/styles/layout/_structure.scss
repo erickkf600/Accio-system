@@ -1,0 +1,37 @@
+body, html, *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font1;
+}
+.grid-wrapper{
+  display: grid;
+  grid-template-areas: "toolbar toolbar" "sidemenu main";
+  grid-template-columns: 50px 1fr;
+  @include respond-to('small'){
+    grid-template-columns: 285px 1fr
+  } 
+}
+header{
+  grid-area: toolbar;
+}
+.sideMenu{
+  grid-area: sidemenu; 
+}
+.content{
+  grid-area: main; 
+  margin-top: 5rem;
+}
+button{
+    border: none;
+    &:focus{
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+}
+p{
+  margin: 0;
+  padding: 0;
+  font-family: $font1;  
+}

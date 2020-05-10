@@ -1,0 +1,30 @@
+header{
+    position: fixed;
+    top: 14px;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding:0 33px 0 26px;
+    p{
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-family: $font1;
+    }
+    .right{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+       
+        button{
+            background: transparent;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+    
+}
