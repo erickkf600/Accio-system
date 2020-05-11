@@ -1,5 +1,6 @@
 // UTILS
 @import "./utils/mixins";
+@import "./utils/_extendables";
 @import "./utils/variables";
 @import "./utils/placeholders";
 @import "./layout/structure";
@@ -9,4 +10,8 @@
 @import "components/header-wrapper/toolbar";
 @import "components/header-wrapper/sidebar";
 @import "components/header-wrapper/_theme-menu";
+
+//PAGES
+@import "components/Home/wapper";
+
 

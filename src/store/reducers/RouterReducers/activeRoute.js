@@ -1,6 +1,6 @@
 
 const ACTIVE_ROUTE = {
-    routeActive: "Home"
+    routeActive: "Home",
 }
 
 export default function activeRoute(state = ACTIVE_ROUTE, action) {

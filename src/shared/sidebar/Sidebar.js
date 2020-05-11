@@ -18,7 +18,7 @@ function Sidebar({ theme, links, activeRoute}) {
             <Aside>
                 <ul className="sideMenu">
                     {links.map((link, i) => (
-                        <li key={i} className="link" onClick={() => activeRoute(link.name)}>
+                        <li key={i} className={`link ${actions.setActiveRoute(link.path)}`} onClick={() => activeRoute(link.name)}>
                             <Link to={link.path}><i className={link.icon}></i>{link.name}</Link>
                         </li>
                     ))}

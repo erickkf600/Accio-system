@@ -1,0 +1,9 @@
+%border-radius{
+    @include border-radius(5px)
+}
+%remove-focus{
+    &:focus{
+        box-shadow: none;
+        outline: none
+    }
+}

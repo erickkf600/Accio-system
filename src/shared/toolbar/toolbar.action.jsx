@@ -3,13 +3,12 @@ import * as themeActions from './../../store/actions/ThemeActions/theme'
 
 
 export const setActiveRoute = (links, activeRoute) => {
-    let activePage = [];
     for (let i = 0; i < links.length; i++) {
-        if (links[i].path === window.location.pathname) {
-            activePage.push(links[i].name)
-        }
+        if (window.location.pathname.indexOf(links[i].path) !== -1){
+            return links[i].name
+        }  
     }
-    return activePage
+    return activeRoute
 }
 
 //RETORNA OS DADOS DO REDUCE 

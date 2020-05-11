@@ -10,7 +10,7 @@
     margin-top: 80px;
     border-radius: 5px;
     .link{
-        @include border-radius(5px);
+        @extend %border-radius;
         position: relative;
         @include transition(0.2s);
         font-size: 12px;

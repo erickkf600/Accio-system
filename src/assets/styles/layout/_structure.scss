@@ -4,12 +4,36 @@ body, html, *{
   box-sizing: border-box;
   font-family: $font1;
 }
+//CONTAINER 
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @include respond-to('device'){
+      max-width: 540px;
+  }
+  @include respond-to('small'){
+      max-width: 720px;
+  }
+  @include respond-to('medium'){
+      max-width: 960px;
+  }
+  @include respond-to('large'){
+      max-width: 1140px;
+  }
+  @include respond-to('extra-large'){
+      max-width: 1300px;
+  }
+}
 .grid-wrapper{
   display: grid;
   grid-template-areas: "toolbar toolbar" "sidemenu main";
   grid-template-columns: 50px 1fr;
+  // grid-template-rows: 50px 1fr;
   @include respond-to('small'){
-    grid-template-columns: 285px 1fr
+    grid-template-columns: 230px 1fr
   } 
 }
 header{
