@@ -11,6 +11,10 @@
 @import "components/header-wrapper/sidebar";
 @import "components/header-wrapper/_theme-menu";
 
+//THEMING
+@import "../theme/cards/card";
+
+
 //PAGES
 @import "components/Home/wapper";
 

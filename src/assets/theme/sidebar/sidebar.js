@@ -13,7 +13,7 @@ const textColor = theme("theme", {
     default: "#1d253b",
     dark: "#fff",
     light: "#000",
-    blue: "#AFAFAF",
+    blue: "#fff",
     gray: "#fff"
 });
 
@@ -31,7 +31,7 @@ export const Aside = styled.div`
     position: fixed;
     box-shadow: 0px 20px 100px 2px rgba(0,0,0,0.6);
     height: 100vh;
-    .link a{
+    .link a, .link i{
         color: ${textColor};
     }
     .link:hover{
@@ -39,5 +39,6 @@ export const Aside = styled.div`
     }
     .active{
         background: ${linkBackground};
+        
     }
 `;
