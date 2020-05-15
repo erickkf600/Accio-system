@@ -1,6 +1,7 @@
 import React from 'react'
 import * as actions from './home.action.jsx'
 import { connect } from 'react-redux'
+import { Card } from '../../assets/theme/cards/card.js';
 function Home({theme}) {
     let savedTheme = localStorage.getItem("theme"); 
     let actualTheme;
@@ -9,10 +10,9 @@ function Home({theme}) {
     }else{
         actualTheme = savedTheme
     }
-    console.log(actualTheme)
     return (
             <div className="content container">
-                    <div className={`card ${actualTheme}`}>
+                <Card>
                     <div className="select-date">
                         <select name="select-mes">
                             <option value="">Mês</option>
@@ -21,8 +21,7 @@ function Home({theme}) {
                             <p>{(new Date().getFullYear())}</p>
                         </div>
                     </div>
-
-                    </div>
+                </Card>
             </div>
     )
 }

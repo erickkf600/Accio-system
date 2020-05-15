@@ -1,7 +1,7 @@
 .chooseTheme{
     position: absolute;
-    width: 236px;
-    height: 200px;
+    width: 175px;
+    height: 134px;
     background: #282e38;
     right: 3.5rem;
     top: 57px;
@@ -16,9 +16,11 @@
     }
     ul{
         list-style: none;
-        display: flex;
+        display: grid;
         justify-content: center;
-        margin: 0;
+        grid-template-columns: 1fr 1fr;
+        width: 10px;
+        margin: auto;
         padding: 0;
         li{
             width: 23px;
@@ -36,7 +38,7 @@
                 background: linear-gradient(-45deg, $blue-primary, $blue-primary 49%, $color-white 49%, $color-white 51%, $blue-secondary 51% );
             }
             &.light{
-                background: $color-white;
+                background: linear-gradient(-45deg, $light-primary, $light-primary 49%, $color-white 49%, $color-white 51%, $light-secondary 51% );
             }
         }
     }

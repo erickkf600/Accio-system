@@ -2,25 +2,22 @@ import styled from 'styled-components';
 import theme from "styled-theming";
 
 const backgroundColor = theme("theme", {
-    default: "#F5F6FA",
+    light: "#673AB7",
     dark: "#27293D",
-    light: "#f00",
     blue: "linear-gradient(#1953b0, #0b2f6b)",
     gray: "#23C1CC",
 });
 
 const textColor = theme("theme", {
-    default: "#1d253b",
+    light: "#FFFFFF",
     dark: "#fff",
-    light: "#000",
     blue: "#fff",
     gray: "#fff"
 });
 
 const linkBackground = theme("theme", {
-    default: "#1d253b",
-    dark: "#20212F",
     light: "#000",
+    dark: "#20212F",
     blue: "#AFAFAF",
     gray: "#18A0A9"
 });

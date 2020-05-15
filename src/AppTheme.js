@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 const SetTheme = ({ children, theme }) => {
     let SelectedTheme = localStorage.getItem("theme");
     return (
-        <ThemeProvider theme={{ theme: SelectedTheme ? SelectedTheme : "default" }}>
+        <ThemeProvider theme={{ theme: SelectedTheme ? SelectedTheme : "light" }}>
             {children}
         </ThemeProvider>
     );

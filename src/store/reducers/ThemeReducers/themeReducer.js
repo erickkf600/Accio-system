@@ -1,5 +1,5 @@
 const DEFAULT = {
-    theme: "default",
+    theme: "light",
 }
 export default function themeReducer(state = DEFAULT, action) {
     if (action.type === "CHANGE_THEME"){
