@@ -3,13 +3,6 @@ import * as actions from './home.action.jsx'
 import { connect } from 'react-redux'
 import { Card } from '../../assets/theme/cards/card.js';
 function Home({theme}) {
-    let savedTheme = localStorage.getItem("theme"); 
-    let actualTheme;
-    if (!savedTheme){
-        actualTheme = theme.theme
-    }else{
-        actualTheme = savedTheme
-    }
     return (
             <div className="content container">
                 <Card>

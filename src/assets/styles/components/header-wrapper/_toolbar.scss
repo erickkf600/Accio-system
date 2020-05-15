@@ -7,22 +7,55 @@ header{
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    padding:0 33px 0 26px;
+    padding:0 15px 0 0;
+    @include respond-to('small'){
+        padding:0 33px 0 26px;
+    }
     p{
-        font-size: 15px;
+        font-size: 10px;
         text-transform: uppercase;
         font-family: $font1;
+        @include respond-to('small'){
+            font-size: 15px;
+        }
+    }
+    .left{
+        display: grid;
+        grid-template-columns: 30px 111px;
+        align-items: center;
+        gap: 23px;
+        max-width: 30px;
+        button{
+            background: transparent;
+            font-size: 15px;
+            max-width: 20px;
+            margin-left: 19px;
+        }
+        @include respond-to('small'){
+            button{
+                display: none;
+            }
+        }
     }
     .right{
         display: grid;
         align-items: center;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 10px 10px 30px;
         gap: 30px;
        
         button{
             background: transparent;
+            cursor: pointer;
             i{
-                font-size: 20px;
+                font-size: 15px;
+            }
+        }
+        @include respond-to('small'){
+            grid-template-columns: 1fr 1fr 1fr;
+            button{
+                i{
+                    font-size: 20px;
+                }
             }
         }
     }

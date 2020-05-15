@@ -1,14 +1,24 @@
 .chooseTheme{
     position: absolute;
     width: 175px;
-    height: 134px;
-    background: #282e38;
     right: 3.5rem;
     top: 57px;
     opacity: 0;
+    visibility: hidden;
+    font-weight: bold;
     @include transition(.3s);
     @include transform(translateY(-15%));
-    @include border-radius(0 0 8px 8px);
+    i{
+        font-size: 50px;
+        position: absolute;
+        top: -31px;
+        left: auto;
+        right: 45px;
+        @include respond-to('small'){
+            left: 30px;
+            right: auto;
+        }
+    }
     p{
         font-size: 15px;
         color: #000;
@@ -23,10 +33,11 @@
         margin: auto;
         padding: 0;
         li{
-            width: 23px;
-            height: 23px;
+            width: 33px;
+            height: 25px;
             margin: 10px;
             cursor: pointer;
+            border: 3px solid transparent;
             @include border-radius(50px);
             &.dark{
                 background: linear-gradient(-45deg, $dark-primary, $dark-primary 49%, $color-white 49%, $color-white 51%, $dark-secondary 51% );
@@ -40,10 +51,14 @@
             &.light{
                 background: linear-gradient(-45deg, $light-primary, $light-primary 49%, $color-white 49%, $color-white 51%, $light-secondary 51% );
             }
+            &.active{
+                border: 3px solid #ffff
+            }
         }
     }
     &.show{
         opacity: 1;
+        visibility: visible;
         @include transform(translateY(0));
     }
 }
