@@ -14,7 +14,7 @@ function Toolbar({ activeRoute, colors, changeTheme, toggle, toggleMenu, links }
                 <button onClick={() => toggleMenu()}><i className="fas fa-fill-drip" /></button>
                 <div className={`chooseTheme ${toggle.open ? 'show' : ''}`}>
                     <Dropdown>
-                        <i className="fas fa-caret-up"></i>
+                        <i className="arrow fas fa-caret-up"></i>
                         <p>Temas</p>
                         <ul>
                             {colors.map(color => (
