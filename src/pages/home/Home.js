@@ -1,25 +1,28 @@
 import React from 'react'
 import * as actions from './home.action.jsx'
-import { connect } from 'react-redux'
 import { Card } from '../../assets/theme/cards/card.js';
 import HomeCards from '../../components/home-cards/home-cards.js';
-function Home({theme}) {
+import { connect } from 'react-redux'
+import { MESES } from './../../mocks/mounths.mock'
+function Home({ selectMounth }) {
     return (
-            <div className="content container">
-                <Card>
-                    <div className="select-date">
-                        <select name="select-mes">
-                            <option value="">Mês</option>
-                        </select>
-                        <div className="ano">
-                            <p>{(new Date().getFullYear())}</p>
-                        </div>
+        <div className="content container">
+            <Card>
+                <div className="select-date">
+                    <select name="select-mes" onChange={selectMounth}>
+                        <option value="">Mês</option>
+                        {MESES.map((mes, i) => (
+                            <option key={i} value={mes.value}>{mes.nome_show}</option>
+                        ))}
+                    </select>
+                    <div className="ano">
+                        <p>{actions.ano}</p>
                     </div>
-                </Card>
-                <HomeCards />
-            </div>
+                </div>
+            </Card>
+            <HomeCards />
+        </div>
     )
 }
 
-export default connect(actions.mapStateToProps)(Home)
-
+export default connect(null, actions.mapDispatchToProps)(Home)

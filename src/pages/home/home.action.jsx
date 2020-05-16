@@ -1,5 +1,9 @@
+import { bindActionCreators } from "redux"
+import * as FethApi from './../../store/actions/API-Actions/api-actions'
+
+export const ano = (new Date().getFullYear())
 
 
-export const mapStateToProps = state => ({
-    theme: state.themeReducer.theme
-})
+export const mapDispatchToProps = dispatch => ({
+    selectMounth: (e, ano) => dispatch(FethApi.getParams(e.target.value, (new Date().getFullYear())))
+});
