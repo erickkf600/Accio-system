@@ -18,7 +18,7 @@ export const textColor = theme("theme", {
 export const Container = styled.div`
   background:  ${backgroundColor};
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   header{
     i, p, b{
       color: ${textColor};

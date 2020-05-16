@@ -2,6 +2,7 @@ import React from 'react'
 import * as actions from './home.action.jsx'
 import { connect } from 'react-redux'
 import { Card } from '../../assets/theme/cards/card.js';
+import HomeCards from '../../components/home-cards/home-cards.js';
 function Home({theme}) {
     return (
             <div className="content container">
@@ -15,6 +16,7 @@ function Home({theme}) {
                         </div>
                     </div>
                 </Card>
+                <HomeCards />
             </div>
     )
 }

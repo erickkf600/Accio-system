@@ -1,0 +1,88 @@
+.grid-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 3rem;
+    @include respond-to('small'){
+        grid-template-columns: 1fr 1fr;
+    }
+    @include respond-to('medium'){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    b{
+        font-size: 30px;
+        font-family: $font1;
+        margin-bottom: 20px;
+    }
+    p{
+        margin: 16px 0;
+        letter-spacing: 2px;
+    }
+    .card{
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        height: 170px;
+        position: relative;
+        .card-head{
+            text-align: center;
+            border-right: 2px solid;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            p{
+                margin: 0;
+                font-size: 20px;
+            }
+        }
+        .card-body{
+            margin-left: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            button{
+                position: absolute;
+                right:  0;
+                bottom: 15px;
+                background: transparent;
+                border: solid 1px;
+                padding: 8px 10px;
+                margin: 0 15px;
+                font-weight: normal;
+                font-family: $font1;
+                font-size: 12px;
+                text-transform: uppercase;
+                cursor: pointer;
+                &:hover{
+                    font-weight: bold;
+                }
+                &:first-child{
+                    right: 75px;
+                }
+            }
+        }
+        .pago{
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: $font1;
+            text-shadow: 0 2px 2px #000;
+            color: #F00;
+            background: rgba($color: #f00, $alpha: .3);
+            button{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                color: #ffffff;
+                font-size: 20px;
+                background: transparent;
+            }
+        }
+    }
+}

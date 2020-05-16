@@ -20,5 +20,6 @@ export const Card = styled.div`
     color: ${textColor};
     box-shadow: 0 2px 7px 0 rgba(0,0,0,0.13);
     border-radius: 5px;
+    border-color: ${textColor};
     
 `;

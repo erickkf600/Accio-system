@@ -7,14 +7,8 @@ import * as actions from './sidebar.action.jsx'
 
 function Sidebar({ theme, links, activeRoute}) {
     let savedTheme = localStorage.getItem("theme"); 
-    let actualTheme;
-    if (!savedTheme){
-        actualTheme = theme.theme
-    }else{
-        actualTheme = savedTheme
-    }
     return (
-        <ThemeProvider theme={{ theme: actualTheme }}>
+        <ThemeProvider theme={{ theme: savedTheme ? savedTheme : theme  }}>
             <Aside>
                 <ul className="sideMenu">
                     {links.map((link, i) => (
