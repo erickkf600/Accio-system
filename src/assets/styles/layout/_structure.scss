@@ -59,3 +59,16 @@ p{
   padding: 0;
   font-family: $font1;  
 }
+
+//FORMS
+input, select{
+    height: 45px;
+    @include border-radius(5px);
+    border: solid 1px #ccc;
+    padding: 0 10px;
+    &:focus{
+        border: none;  
+        box-shadow: none;
+        outline: none;
+    }
+}    

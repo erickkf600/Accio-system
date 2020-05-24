@@ -2,16 +2,16 @@ import styled from 'styled-components';
 import theme from "styled-theming";
 
 const backgroundColor = theme("theme", {
-    light: "#FFFFF",
+    light: "#FFFFFF",
     dark: "#27293D",
     blue: "#AFAFAF",
-    gray: "#FFFFF",
+    gray: "#FFFFFF",
 });
 
 const textColor = theme("theme", {
     light: "#673AB7",
-    dark: "#fff",
-    blue: "#fff",
+    dark: "#FFFFFF",
+    blue: "#FFFFFF",
     gray: "#27293D"
 });
 

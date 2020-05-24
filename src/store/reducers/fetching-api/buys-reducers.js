@@ -1,4 +1,4 @@
-const COMPRAS = {}
+const COMPRAS = {res: []}
 
 export default function buysReducers(state = COMPRAS, action) {
     if (action.type === "SET_DATA"){
@@ -6,6 +6,6 @@ export default function buysReducers(state = COMPRAS, action) {
             ...state,
             res: action.data
         }
-    }
+    }    
     return state
 }

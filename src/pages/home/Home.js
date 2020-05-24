@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { MESES } from './../../mocks/mounths.mock'
 function Home({ selectMounth }) {
     return (
-        <div className="content container">
+        <div className="content container home">
             <Card>
                 <div className="select-date">
                     <select name="select-mes" onChange={selectMounth}>
@@ -21,6 +21,8 @@ function Home({ selectMounth }) {
                 </div>
             </Card>
             <HomeCards />
+
+            {/* <p>Loading</p> */}
         </div>
     )
 }

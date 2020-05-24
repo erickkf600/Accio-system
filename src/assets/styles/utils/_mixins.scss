@@ -9,6 +9,24 @@
     }
 };
 
+@mixin placeholder{
+  ::-webkit-input-placeholder{
+    @content
+  }
+  :-moz-placeholder{
+    @content
+  }         
+  ::-moz-placeholder{
+    @content
+  }          
+  :-ms-input-placeholder{
+    @content 
+  }      
+} 
+   
+    
+  
+
 @mixin linear-gradient($from, $to) {
   background: $to;
 	background: -moz-linear-gradient(top, $from 0%, $to 100%);

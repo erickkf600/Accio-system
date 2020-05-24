@@ -8,6 +8,7 @@ export function getParams(mes, ano) {
             })
             .catch(error => {
                 console.log(error);
+                throw error
             })
     }
 }

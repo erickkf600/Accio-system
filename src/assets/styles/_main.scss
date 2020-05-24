@@ -2,7 +2,6 @@
 @import "./utils/mixins";
 @import "./utils/_extendables";
 @import "./utils/variables";
-@import "./utils/placeholders";
 @import "./layout/structure";
 
 
@@ -13,6 +12,7 @@
 
 
 //PAGES
-@import "components/Home/wapper";
+@import "components/Home/_home-index";
+@import "components/Add-compra/add-comppra-index";
 
 

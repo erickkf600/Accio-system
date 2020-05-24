@@ -32,6 +32,7 @@ header{
             margin-left: 19px;
         }
         @include respond-to('small'){
+            grid-template-columns: 170px 111px;
             button{
                 display: none;
             }

@@ -5,5 +5,5 @@ export const ano = (new Date().getFullYear())
 
 
 export const mapDispatchToProps = dispatch => ({
-    selectMounth: (e, ano) => dispatch(FethApi.getParams(e.target.value, (new Date().getFullYear())))
+    selectMounth: (e) => dispatch(FethApi.getParams(e.target.value, (new Date().getFullYear())))
 });
